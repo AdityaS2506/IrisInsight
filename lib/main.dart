@@ -43,16 +43,18 @@ class MyHomePage extends StatelessWidget {
       children: [
         Positioned.fill(
           child: Image.asset(
-            'assets/images/bg.jpg',
+            'assets/images/bg.png',
             fit: BoxFit.cover,
           ),
         ),
         Scaffold(
+          extendBodyBehindAppBar: true,
           appBar: AppBar(
             title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, color: Color(
                 0xFFFFFFFF))),
             centerTitle: true,
-            backgroundColor: Color(0xFF386CE3),
+            elevation: 0,
+            backgroundColor: Colors.transparent,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(20), // Adjust the value according to your preference
@@ -60,283 +62,287 @@ class MyHomePage extends StatelessWidget {
             ),
           ),
           body: SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.all(1.0),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(7.0),
-                        child: Text("Let's Illuminating eye health through ML",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27)),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(1.0),
-                        child: Text("__̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲",style: TextStyle(fontWeight: FontWeight.w100,fontSize: 27)),
-                      ),
-                      Padding(padding: EdgeInsets.only(top: 5)),
+            scrollDirection: Axis.vertical,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: SizedBox(
+                    height: 100,
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: Text("Let's Illuminating eye health through ML",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27,color: Colors.grey)),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(1.0),
+                  child: Text("__̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲",style: TextStyle(fontWeight: FontWeight.w100,fontSize: 27,color: Color(
+                      0xFF5E5E5E))),
+                ),
+                Padding(padding: EdgeInsets.only(top: 5)),
 
-                      Container(
-                        decoration: const BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 25,
-                              spreadRadius: 0,
-                              offset: Offset(10, 10),
-                            ),
-                          ],
-                        ),
-                        child: MaterialButton(
-                          padding: const EdgeInsets.all(12.0),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Container(
-                                width: 380,
-                                height: 180,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: Image.asset('assets/images/ml.png').image,
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.end,
-                                    mainAxisAlignment: MainAxisAlignment.start,
-                                    children: [
-
-                                      Text("Eye analysis \nWith ML               ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
-                                      Text("          "), Text("          "), Text("          "), Text("       "),
-                                      Text("Analysis eye disease \nwith using machine learning",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),
-                                    ],
-                                  ),
-                                )
+                Container(
+                  decoration: const BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 25,
+                        spreadRadius: 0,
+                        offset: Offset(10, 10),
+                      ),
+                    ],
+                  ),
+                  child: MaterialButton(
+                    padding: const EdgeInsets.all(12.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Container(
+                          width: 380,
+                          height: 160,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: Image.asset('assets/images/ml.png').image,
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          onPressed: () {
-                            // _getImage(context);
-                            //_getCameraImage(context);
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => eyeinput()),
-                            );
-                          },
-                        ),
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(7.0),
-                        child: Text("𝑺𝒐𝒎𝒆𝒕𝒉𝒊𝒏𝒈 𝑯𝒆𝒂𝒍𝒕𝒉",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23)),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Container(
-                            decoration: const BoxDecoration(
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black38,
-                                  blurRadius: 25,
-                                  spreadRadius: 0,
-                                  offset: Offset(10, 10),
-                                ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+
+                                Text(" Eye analysis With ML        ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Color(
+                                    0xFFD2D2D2)),),
+
                               ],
                             ),
-                            child: MaterialButton(
-                              padding: const EdgeInsets.all(12.0),
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(20.0),
-                              ),
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(20.0),
-                                child: Container(
-                                    width: 180,
-                                    height: 250,
-                                    decoration: BoxDecoration(
-                                      image: DecorationImage(
-                                        image: Image.asset('assets/images/num.png').image,
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    child: const Padding(
-                                      padding: EdgeInsets.all(8.0),
-                                      child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.start,
-                                        mainAxisAlignment: MainAxisAlignment.end,
-                                        children: [
-                                          Text("Eye vision test",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                                          Text("       "),Text("Checking your eye number with test",style: TextStyle(fontSize: 15),),
-                                        ],
-                                      ),
-                                    )
-                                ),
-                              ),
-                              onPressed: () {
-                                check_numb(context);
-                              },
-                            ),
-                          ),
-                          Column(
-                            children: [
-                              Container(
-                                decoration: const BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black38,
-                                      blurRadius: 25,
-                                      spreadRadius: 0,
-                                      offset: Offset(10, 10),
-                                    ),
-                                  ],
-                                ),
-                                child: MaterialButton(
-                                  padding: const EdgeInsets.all(12.0),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(20.0),
-                                    child: Container(
-                                        width: 180,
-                                        height: 100,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image: Image.asset('assets/images/eye1.png').image,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        child: const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: [
-                                              Text("Eye Exercises",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                                            ],
-                                          ),
-                                        )
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                    // shoe1(context);
-                                  },
-                                ),
-                              ),
-                              SizedBox(
-                                height: 20,
-                              ),
-                              Container(
-                                decoration: const BoxDecoration(
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: Colors.black38,
-                                      blurRadius: 25,
-                                      spreadRadius: 0,
-                                      offset: Offset(10, 10),
-                                    ),
-                                  ],
-                                ),
-                                child: MaterialButton(
-                                  padding: const EdgeInsets.all(12.0),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(20.0),
-                                    child: Container(
-                                        width: 180,
-                                        height: 100,
-                                        decoration: BoxDecoration(
-                                          image: DecorationImage(
-                                            image: Image.asset('assets/images/eye2.jpg').image,
-                                            fit: BoxFit.cover,
-                                          ),
-                                        ),
-                                        child: const Padding(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            mainAxisAlignment: MainAxisAlignment.end,
-                                            children: [
-                                              Text("Eye",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold),),
-                                            ],
-                                          ),
-                                        )
-                                    ),
-                                  ),
-                                  onPressed: () {
-                                  },
-                                ),
-                              ),
-                            ],
+                          )
+                      ),
+                    ),
+                    onPressed: () {
+                      // _getImage(context);
+                      //_getCameraImage(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => eyeinput()),
+                      );
+                    },
+                  ),
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: Text("Check Your Eye",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27,color: Colors.grey)),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Container(
+                      decoration: const BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black38,
+                            blurRadius: 25,
+                            spreadRadius: 0,
+                            offset: Offset(10, 10),
                           ),
                         ],
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(7.0),
-                        child: Text("𝑶𝒕𝒉𝒆𝒓 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔..",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23,color: Colors.black)),
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black38,
-                              blurRadius: 25,
-                              spreadRadius: 0,
-                              offset: Offset(10, 10),
-                            ),
-                          ],
+                      child: MaterialButton(
+                        padding: const EdgeInsets.all(12.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20.0),
                         ),
-                        child: MaterialButton(
-                          padding: const EdgeInsets.all(12.0),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20.0),
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(20.0),
-                            child: Container(
-                                width: 380,
-                                height: 180,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: Image.asset('assets/images/eyeq.png').image,
-                                    fit: BoxFit.cover,
-                                  ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20.0),
+                          child: Container(
+                              width: 380,
+                              height: 160,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: Image.asset('assets/images/num.png').image,
+                                  fit: BoxFit.cover,
                                 ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(8.0),
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.center,
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Text("The eye is",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
-                                      Text("the jewel of ",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
-                                      Text("the body.",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
-                                    ],
-                                  ),
-                                )
-                            ),
+                              ),
+                              child: const Padding(
+                                padding: EdgeInsets.all(8.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: [
+                                    Text("Eye vision test",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white),),
+                                    Text("       "),Text("Checking your eye number with test",style: TextStyle(fontSize: 15,color: Colors.white),),
+                                  ],
+                                ),
+                              )
                           ),
-                          onPressed: () {
-
-                          },
                         ),
+                        onPressed: () {
+                          check_numb(context);
+                        },
                       ),
-                      const SizedBox(
-                        height: 20,
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                        Container(
+                          decoration: const BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 25,
+                                spreadRadius: 0,
+                                offset: Offset(10, 10),
+                              ),
+                            ],
+                          ),
+                          child: MaterialButton(
+                            padding: const EdgeInsets.all(12.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Container(
+                                  width: 180,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: Image.asset('assets/images/eye1.png').image,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text("Eye Exercises",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                      ],
+                                    ),
+                                  )
+                              ),
+                            ),
+                            onPressed: () {
+                              // shoe1(context);
+                            },
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Container(
+                          decoration: const BoxDecoration(
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black38,
+                                blurRadius: 25,
+                                spreadRadius: 0,
+                                offset: Offset(10, 10),
+                              ),
+                            ],
+                          ),
+                          child: MaterialButton(
+                            padding: const EdgeInsets.all(12.0),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20.0),
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Container(
+                                  width: 180,
+                                  height: 100,
+                                  decoration: BoxDecoration(
+                                    image: DecorationImage(
+                                      image: Image.asset('assets/images/eye2.png').image,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(8.0),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        Text("Eye",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                      ],
+                                    ),
+                                  )
+                              ),
+                            ),
+                            onPressed: () {
+                            },
+                          ),
+                        ),
+                  ],
+                ),
+                const Padding(
+                  padding: EdgeInsets.all(7.0),
+                  child: Text("𝑶𝒕𝒉𝒆𝒓 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔..",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23,color: Colors.black)),
+                ),
+                Container(
+                  decoration: const BoxDecoration(
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.black38,
+                        blurRadius: 25,
+                        spreadRadius: 0,
+                        offset: Offset(10, 10),
                       ),
-                      const SizedBox(
-                        height: 55,
-                      )
                     ],
                   ),
-              ),
+                  child: MaterialButton(
+                    padding: const EdgeInsets.all(12.0),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Container(
+                          width: 380,
+                          height: 180,
+                          decoration: BoxDecoration(
+                            image: DecorationImage(
+                              image: Image.asset('assets/images/eyeq.png').image,
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text("The eye is",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
+                                Text("the jewel of ",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
+                                Text("the body.",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
+                              ],
+                            ),
+                          )
+                      ),
+                    ),
+                    onPressed: () {
+
+                    },
+                  ),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const SizedBox(
+                  height: 55,
+                )
+              ],
+            ),
+          ),
           drawer: Drawer(
             child: ListView(
               padding: const EdgeInsets.all(0),
@@ -387,30 +393,22 @@ class MyHomePage extends StatelessWidget {
               // Adjust the width as needed
               height: 50.0, // Adjust the height as needed
               child: BottomAppBar(
-                color: Color(0xFF386CE3),
+                color: Color(0xFF151515),
                 shape: const CircularNotchedRectangle(),
                 notchMargin: 4.0,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    IconButton(icon: const Icon(Icons.home), onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MaterialApp(
-                          // title of the application
-                          title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭',
-                          debugShowCheckedModeBanner: false,  //for remove line
-                          // theme of the widget
-                          theme: ThemeData(
-                              appBarTheme: const AppBarTheme(color: Colors.lightBlueAccent)
-
-                          ),
-                          // Inner UI of the application
-                          home: const MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭'),
-                        )),
-                      );
-                    }),
+                    IconButton(
+                      icon: const Icon(Icons.home),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭')),
+                        );
+                      },
+                    ),
                     IconButton(
                       icon: const Icon(Icons.explore),
                       onPressed: () {

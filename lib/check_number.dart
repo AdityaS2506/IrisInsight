@@ -17,15 +17,16 @@ class _check_numState extends State<check_num> {
       children: [
         Positioned.fill(
           child: Image.asset(
-            'assets/images/bg.jpg',
+            'assets/images/bg.png',
             fit: BoxFit.cover,
           ),
         ),
         Scaffold(
           appBar: AppBar(
-            title: Text("𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭", style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF112354))),
+            title: Text("𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭", style: TextStyle(fontWeight: FontWeight.bold, color: Color(
+                0xFFFFFFFF))),
             centerTitle: true,
-            backgroundColor: Color(0xFF386CE3),
+            backgroundColor: Color(0xFF151515),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.vertical(
                 bottom: Radius.circular(20), // Adjust the value according to your preference
@@ -46,7 +47,7 @@ class _check_numState extends State<check_num> {
                         eyenumtest1(context);
                       },
                       style: ElevatedButton.styleFrom(
-                       primary: Color(0xFF6C8FDC),
+                        primary: Color(0xFF343E80),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
@@ -76,7 +77,7 @@ class _check_numState extends State<check_num> {
                         eyeblind(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF6C8FDC),
+                        primary: Color(0xFF343E80),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
@@ -106,7 +107,7 @@ class _check_numState extends State<check_num> {
                         eyeblind(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF6C8FDC),
+                        primary: Color(0xFF343E80),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
@@ -144,7 +145,7 @@ class _check_numState extends State<check_num> {
               // Adjust the width as needed
               height: 50.0, // Adjust the height as needed
               child: BottomAppBar(
-                color: Color(0xFF386CE3),
+                color: Color(0xFF343E80),
                 shape: const CircularNotchedRectangle(),
                 notchMargin: 4.0,
                 child: Row(
@@ -154,18 +155,7 @@ class _check_numState extends State<check_num> {
                     IconButton(icon: const Icon(Icons.home), onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => MaterialApp(
-                          // title of the application
-                          title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭',
-                          debugShowCheckedModeBanner: false,  //for remove line
-                          // theme of the widget
-                          theme: ThemeData(
-                              appBarTheme: const AppBarTheme(color: Colors.lightBlueAccent)
-
-                          ),
-                          // Inner UI of the application
-                          home: const MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭'),
-                        )),
+                        MaterialPageRoute(builder: (context) => MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭')),
                       );
                     }),
                     IconButton(

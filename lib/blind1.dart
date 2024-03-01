@@ -39,7 +39,7 @@ class _Text1State extends State<blind1> {
                 children: [
                   const SizedBox(width: 10,),
                   SizedBox(
-                    width: 70,
+                    width: 75,
                     height: 40,
                     child: ElevatedButton(
 
@@ -58,12 +58,12 @@ class _Text1State extends State<blind1> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                      child: const Text('24',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
                   SizedBox(
-                    width: 70,
+                    width: 75,
                     height: 40,
                     child: ElevatedButton(
 
@@ -82,7 +82,7 @@ class _Text1State extends State<blind1> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                      child: const Text('14',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -113,7 +113,7 @@ class _Text1State extends State<blind1> {
                   ),
                   const SizedBox(width: 10,),
                   SizedBox(
-                    width: 70,
+                    width: 75,
                     height: 40,
                     child: ElevatedButton(
 
@@ -132,7 +132,7 @@ class _Text1State extends State<blind1> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                      child: const Text('71',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                 ],
@@ -469,6 +469,288 @@ class _blind4State extends State<blind4> {
 
                           Navigator.pushReplacement(
                             context,
+                            MaterialPageRoute(builder: (context) => blind5()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('9',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+                          score++;
+                          // Navigate to next page
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind5()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind5()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('96',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind5()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('23',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class blind5 extends StatefulWidget {
+  const blind5({Key? key}) : super(key: key);
+
+  @override
+  State<blind5> createState() => _blind5State();
+}
+
+class _blind5State extends State<blind5> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: double.maxFinite,
+              height: 400,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/b7.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind6()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('9',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+                          score++;
+                          // Navigate to next page
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind6()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind6()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('96',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => blind6()),
+                          );
+                        });
+                      },
+                      style: ElevatedButton.styleFrom(
+
+                        primary: Colors.white, // Background color
+                        onPrimary: Colors.black, // Text color
+                        side: const BorderSide(color: Colors.blue), // Border color
+                      ),
+                      child: const Text('23',style: TextStyle(fontSize: 35),),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class blind6 extends StatefulWidget {
+  const blind6({Key? key}) : super(key: key);
+
+  @override
+  State<blind6> createState() => _blind6State();
+}
+
+class _blind6State extends State<blind6> {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              width: double.maxFinite,
+              height: 400,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/b7.jpg'),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 100,
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  const SizedBox(width: 10,),
+                  SizedBox(
+                    width: 75,
+                    height: 40,
+                    child: ElevatedButton(
+
+                      onPressed: () {
+                        setState(() {
+
+                          Navigator.pushReplacement(
+                            context,
                             MaterialPageRoute(builder: (context) => blind7()),
                           );
                         });
@@ -713,6 +995,20 @@ class ScorePage extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          "Score Page",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFFFFFFFF)),
+        ),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20), // Adjust the value according to your preference
+          ),
+        ),
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

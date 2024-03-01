@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'Ctest.dart';
 import 'blind1.dart';
+import 'colorcube.dart';
 import 'test1.dart';
 import 'main.dart';
+import 'webview.dart';
 
 
 class check_num extends StatefulWidget {
@@ -47,7 +50,7 @@ class _check_numState extends State<check_num> {
                         eyenumtest1(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF343E80),
+                        primary: Color(0xFF7E7E7E),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
@@ -77,7 +80,7 @@ class _check_numState extends State<check_num> {
                         eyeblind(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF343E80),
+                        primary: Color(0xFF7E7E7E),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
@@ -104,22 +107,52 @@ class _check_numState extends State<check_num> {
                     height: 70,
                     child: ElevatedButton(
                       onPressed: () {
-                        eyeblind(context);
+                        colorcu(context);
                       },
                       style: ElevatedButton.styleFrom(
-                        primary: Color(0xFF343E80),
+                        primary: Color(0xFF7E7E7E),
                         // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           const Text(
-                            "3. find color",
+                            "3. find color box",
                             style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                           Padding(
                             padding: const EdgeInsets.all(5.0),
-                            child: Image.asset('assets/images/eyeblind.png',),
+                            child: Image.asset('assets/images/cube1.png',),
+                          ),
+
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SizedBox(
+                    width: 380,
+                    height: 70,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        ctestbutton(context);
+                      },
+                      style: ElevatedButton.styleFrom(
+                        primary: Color(0xFF7E7E7E),
+                        // side: const BorderSide(color: Color(0xFF386CE2), width: 3),
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          const Text(
+                            "3. C test",
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(5.0),
+                            child: Image.asset('assets/images/ccing.png',),
                           ),
 
                         ],
@@ -145,35 +178,44 @@ class _check_numState extends State<check_num> {
               // Adjust the width as needed
               height: 50.0, // Adjust the height as needed
               child: BottomAppBar(
-                color: Color(0xFF343E80),
+                color: Color(0xFF151515),
                 shape: const CircularNotchedRectangle(),
                 notchMargin: 4.0,
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    IconButton(icon: const Icon(Icons.home), onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭')),
-                      );
-                    }),
                     IconButton(
-                      icon: const Icon(Icons.explore),
+                      icon: const Icon(Icons.home,color: Colors.white,),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => MyHomePage(title: 'IrisInsight')),
+                        );
                       },
                     ),
                     IconButton(
-                      icon: Icon(Icons.category),
+                      icon: const Icon(Icons.location_on_outlined,color: Colors.white,),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Eyehospital1()),
+                        );
                       },
                     ),
                     IconButton(
-                      icon: const Icon(Icons.person),
+                      icon: Icon(Icons.explore,color: Colors.white,),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Eyehospital()),
+                        );
+                      },
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.person,color: Colors.white,),
+                      onPressed: () {
+                        web(context);
                       },
                     ),
                   ],
@@ -188,9 +230,17 @@ class _check_numState extends State<check_num> {
 }
 
 void eyenumtest1(BuildContext context) {
-  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Test1()));
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => InstructionPage()));
 }
 
 void eyeblind(BuildContext context) {
   Navigator.of(context).push(MaterialPageRoute(builder: (context) => blind1()));
+}
+
+void colorcu(BuildContext context) {
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ColorCube()));
+}
+
+void ctestbutton(BuildContext context) {
+  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Ctestins()));
 }

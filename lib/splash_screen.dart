@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
       Duration(seconds: 8),
           () => Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭')),
+        MaterialPageRoute(builder: (context) => MyHomePage(title: 'IrisInsight')),
       ),
     );
   }

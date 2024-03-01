@@ -1,6 +1,8 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'Eyecare.dart';
+import 'Eyemodal.dart';
 import 'categories.dart';
 import 'eyeml.dart';
 import 'webview.dart';
@@ -14,7 +16,7 @@ void main() async {
 }
 
 class MyApp extends StatelessWidget {
-  final appTitle = '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭';
+  final appTitle = 'IrisInsight';
 
    const MyApp({Key? key}) : super(key: key);
 
@@ -48,9 +50,9 @@ class MyHomePage extends StatelessWidget {
           ),
         ),
         Scaffold(
-          extendBodyBehindAppBar: true,
+          // extendBodyBehindAppBar: true,
           appBar: AppBar(
-            title: Text(title, style: TextStyle(fontWeight: FontWeight.bold, color: Color(
+            title: Text('IrisInsight', style: TextStyle(fontWeight: FontWeight.bold, color: Color(
                 0xFFFFFFFF))),
             centerTitle: true,
             elevation: 0,
@@ -70,17 +72,19 @@ class MyHomePage extends StatelessWidget {
                 const Padding(
                   padding: EdgeInsets.all(7.0),
                   child: SizedBox(
-                    height: 100,
+                    height: 5,
                   ),
                 ),
                 const Padding(
                   padding: EdgeInsets.all(7.0),
-                  child: Text("Let's Illuminating eye health through ML",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27,color: Colors.grey)),
+                  child: Text("Illuminating eye health through ML",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.grey)),
                 ),
-                const Padding(
-                  padding: EdgeInsets.all(1.0),
-                  child: Text("__̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲_̲",style: TextStyle(fontWeight: FontWeight.w100,fontSize: 27,color: Color(
-                      0xFF5E5E5E))),
+                Center(
+                  child: const Padding(
+                    padding: EdgeInsets.all(1.0),
+                    child: Text("───────────────────",style: TextStyle(fontWeight: FontWeight.w100,fontSize: 27,color: Color(
+                        0xFF5E5E5E))),
+                  ),
                 ),
                 Padding(padding: EdgeInsets.only(top: 5)),
 
@@ -104,7 +108,7 @@ class MyHomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Container(
                           width: 380,
-                          height: 160,
+                          height: 190,
                           decoration: BoxDecoration(
                             image: DecorationImage(
                               image: Image.asset('assets/images/ml.png').image,
@@ -118,8 +122,9 @@ class MyHomePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
 
-                                Text(" Eye analysis With ML        ",style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold,color: Color(
+                                Text(" Eye Disease Detection        ",style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Color(
                                     0xFFD2D2D2)),),
+                                Text("     ",style: TextStyle(fontSize: 9),),
 
                               ],
                             ),
@@ -131,18 +136,15 @@ class MyHomePage extends StatelessWidget {
                       //_getCameraImage(context);
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => eyeinput()),
+                        MaterialPageRoute(builder: (context) => eyeinputins()),
                       );
                     },
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(7.0),
-                  child: Text("Check Your Eye",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 27,color: Colors.grey)),
+                  padding: EdgeInsets.all(10.0),
+                  child: Text("Check Your Eye",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 25,color: Colors.white70)),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
                     Container(
                       decoration: const BoxDecoration(
                         boxShadow: [
@@ -176,19 +178,28 @@ class MyHomePage extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
-                                    Text("Eye vision test",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white),),
-                                    Text("       "),Text("Checking your eye number with test",style: TextStyle(fontSize: 15,color: Colors.white),),
+                                    Text("Let's check your vision",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white70),),
+                                    Text("       "),Text("Checking your eye number with test",style: TextStyle(fontSize: 15,color: Colors.white70),),
                                   ],
                                 ),
                               )
                           ),
                         ),
                         onPressed: () {
-                          check_numb(context);
+                          // check_numb(context);
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(builder: (context) => accept()),
+                          );
                         },
                       ),
                     ),
-                  ],
+                Center(
+                  child: const Padding(
+                    padding: EdgeInsets.all(1.0),
+                    child: Text("───────────────────",style: TextStyle(fontWeight: FontWeight.w100,fontSize: 27,color: Color(
+                        0xFF5E5E5E))),
+                  ),
                 ),
                 Row(
                   children: [
@@ -212,7 +223,7 @@ class MyHomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20.0),
                               child: Container(
                                   width: 180,
-                                  height: 100,
+                                  height: 130,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: Image.asset('assets/images/eye1.png').image,
@@ -225,14 +236,14 @@ class MyHomePage extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        Text("Eye Exercises",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                        Text("Eye Exercises",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white70),),
                                       ],
                                     ),
                                   )
                               ),
                             ),
                             onPressed: () {
-                              // shoe1(context);
+                              Eyemodal(context);
                             },
                           ),
                         ),
@@ -259,7 +270,7 @@ class MyHomePage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20.0),
                               child: Container(
                                   width: 180,
-                                  height: 100,
+                                  height: 130,
                                   decoration: BoxDecoration(
                                     image: DecorationImage(
                                       image: Image.asset('assets/images/eye2.png').image,
@@ -272,22 +283,31 @@ class MyHomePage extends StatelessWidget {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       mainAxisAlignment: MainAxisAlignment.end,
                                       children: [
-                                        Text("Eye",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.grey),),
+                                        Text("Eyecare",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white70),),
+                                        SizedBox(
+                                          height: 10,
+                                        )
                                       ],
                                     ),
                                   )
                               ),
                             ),
                             onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(builder: (context) => eyecare()),
+                              );
                             },
                           ),
                         ),
                   ],
                 ),
+
                 const Padding(
                   padding: EdgeInsets.all(7.0),
-                  child: Text("𝑶𝒕𝒉𝒆𝒓 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔..",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23,color: Colors.black)),
+                  child: Text("𝑶𝒕𝒉𝒆𝒓 𝒇𝒆𝒂𝒕𝒖𝒓𝒆𝒔..",style: TextStyle(fontWeight: FontWeight.w600,fontSize: 23,color: Colors.white70)),
                 ),
+
                 Container(
                   decoration: const BoxDecoration(
                     boxShadow: [
@@ -308,32 +328,32 @@ class MyHomePage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20.0),
                       child: Container(
                           width: 380,
-                          height: 180,
+                          height: 160,
                           decoration: BoxDecoration(
                             image: DecorationImage(
-                              image: Image.asset('assets/images/eyeq.png').image,
+                              image: Image.asset('assets/images/shop.png').image,
                               fit: BoxFit.cover,
                             ),
                           ),
                           child: const Padding(
                             padding: EdgeInsets.all(8.0),
                             child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.end,
                               children: [
-                                Text("The eye is",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
-                                Text("the jewel of ",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
-                                Text("the body.",style: TextStyle(fontSize: 26,fontWeight: FontWeight.bold),),
+                                Text("Collabrations",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white70),),
+                                Text("       "),Text("-----aWEFcjnawjsdbc kiuawshecbikas",style: TextStyle(fontSize: 15,color: Colors.white70),),
                               ],
                             ),
                           )
                       ),
                     ),
                     onPressed: () {
-
+                      web(context);
                     },
                   ),
                 ),
+
                 const SizedBox(
                   height: 20,
                 ),
@@ -349,18 +369,18 @@ class MyHomePage extends StatelessWidget {
               children: [
                 const DrawerHeader(
                   decoration: BoxDecoration(
-                    color: Color(0xFF405AB0),
+                    color: Color(0xFF222B41),
                   ), //BoxDecoration
                   child: UserAccountsDrawerHeader(
-                    decoration: BoxDecoration(color: Color(0xFF405AB0)),
+                    decoration: BoxDecoration(color: Color(0xFF222B41)),
                     accountName: Text(
-                      "abc",
+                      "Hello",
                       style: TextStyle(fontSize: 18),
                     ),
                     accountEmail: Text("abc@gmail.com"),
                     currentAccountPictureSize: Size.square(50),
                     currentAccountPicture: CircleAvatar(
-                      backgroundColor: Color(0xFF9DB0FA),
+                      backgroundColor: Color(0xFF5D6696),
                       child: Text(
                         "A",
                         style: TextStyle(fontSize: 30.0, color: Colors.black),
@@ -373,6 +393,36 @@ class MyHomePage extends StatelessWidget {
                   title: const Text(' My Profile '),
                   onTap: () {
                     Navigator.pop(context);
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.remove_red_eye_outlined),
+                  title: const Text('check Eye vision'),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => check_num()),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.location_on_sharp),
+                  title: const Text('Find eye hospitals\nNear Me'),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Eyehospital()),
+                    );
+                  },
+                ),
+                ListTile(
+                  leading: const Icon(Icons.location_on_sharp),
+                  title: const Text('Find Eye Doctor'),
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => Eyehospital1()),
+                    );
                   },
                 ),
               ],
@@ -401,28 +451,34 @@ class MyHomePage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     IconButton(
-                      icon: const Icon(Icons.home),
+                      icon: const Icon(Icons.home,color: Colors.white,),
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MyHomePage(title: '𝐈𝐫𝐢𝐬𝐈𝐧𝐬𝐢𝐠𝐡𝐭')),
+                          MaterialPageRoute(builder: (context) => MyHomePage(title: 'IrisInsight')),
                         );
                       },
                     ),
                     IconButton(
-                      icon: const Icon(Icons.explore),
+                      icon: const Icon(Icons.location_on_outlined,color: Colors.white,),
                       onPressed: () {
-
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Eyehospital1()),
+                        );
                       },
                     ),
                     IconButton(
-                      icon: Icon(Icons.category),
+                      icon: Icon(Icons.explore,color: Colors.white,),
                       onPressed: () {
-                        categoties(context);
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Eyehospital()),
+                        );
                       },
                     ),
                     IconButton(
-                      icon: const Icon(Icons.person),
+                      icon: const Icon(Icons.person,color: Colors.white,),
                       onPressed: () {
                         web(context);
                       },
@@ -447,9 +503,103 @@ void categoties(BuildContext context) {
 }
 
 void check_numb(BuildContext context) {
-  Navigator.push(
+  Navigator.pushReplacement(
       context,
   MaterialPageRoute(builder: (context) => check_num()));
 }
 
+void Eyemodal(BuildContext context) {
+  Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => Eyemodal_()));
+}
 
+
+class accept  extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Eye check", style: TextStyle(fontWeight: FontWeight.bold, color: Color(
+            0xFFFFFFFF))),
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(
+            bottom: Radius.circular(20), // Adjust the value according to your preference
+          ),
+        ),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.only(left: 3.0,right: 3.0),
+        child: Container(
+          margin: EdgeInsets.all(10),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(" ", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.white70),),
+              SizedBox(height: 70),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20),
+                decoration: BoxDecoration(
+                  color: Color(0xFF545454),
+                  borderRadius: BorderRadius.circular(15), // Adjust the radius as needed
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 20),
+                    Text(
+                      "Instructions",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        decoration: TextDecoration.underline,
+                        fontSize: 20,
+                      ),
+                    ),
+                    SizedBox(height: 50,),
+                     Text(
+                        "Please read and accept before you start.This Vision Screening is designed to provide a first impression about your vision at this time. It's not a medical test and no substitute for eye care by a trained professional. It isn't intended for use in diagnosing diseases or mitigating, treating or preventing diseases. This exam is only meant to give you a general idea of your visual acuity and whether a professional eye exam is recommended at this time. We recommend having your eyes checked by an eye doctor once every two years, or sooner if you notice changes in your vision.",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                    SizedBox(height: 50,),
+              SizedBox(
+    width: 250,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => check_num()),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+    primary: Colors.white, // Background color
+    onPrimary: Colors.black, // Text color
+    side: const BorderSide(color: Colors.blue),
+                    padding: EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                  ),
+                  child: Text(
+                    'I agree',
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+    ),
+      ),
+    );
+  }
+}

@@ -1,27 +1,41 @@
 import 'package:flutter/material.dart';
 
 import 'Test3.dart';
-
-class Test2 extends StatefulWidget {
-  const Test2({Key? key}) : super(key: key);
-
-  @override
-  State<Test2> createState() => _Text1State();
+import 'check_number.dart';
+void _showPopupMessage(BuildContext context) {
+  showDialog(
+    context: context,
+    builder: (BuildContext context) {
+      return AlertDialog(
+        title: Text('Test Result'),
+        content: Text('Your vision is very bad you must consult your Doctor'),
+        actions: <Widget>[
+          TextButton(
+            onPressed: () {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => check_num()),
+              );
+            },
+            child: Text(
+              'Close',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 23,
+                color: Colors.black,
+              ),
+            ),
+          ),
+        ],
+      );
+    },
+  );
 }
 
-class _Text1State extends State<Test2> {
-  @override
-  void initState() {
-    super.initState();
-    // Navigate to PageTwo after 8 seconds
-    Future.delayed(Duration(seconds: 5), () {
-      Navigator.push(
-        context,
-        MaterialPageRoute(builder: (context) => Test3()),
-      );
-    });
-  }
+class Test2 extends StatelessWidget {
+  final int Second;
 
+  const Test2({Key? key, required this.Second}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,23 +44,74 @@ class _Text1State extends State<Test2> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text("Page : 2",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white,fontSize: 70),),
+            Center(
+              child: Text(
+                "If you not see the text you cant stop button ",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+              ),
+            ),
             SizedBox(
               height: 50,
             ),
             Container(
               width: double.maxFinite,
               height: 300,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/images/e2.png'),
-                  fit: BoxFit.cover,
+              color: Color(0xFFFDFDFE),
+              child: Center(// Convert degrees to radians
+                child: Image.asset(
+                  'assets/images/e2.png',
+                  height: 150,
+                  alignment: Alignment.center,
                 ),
               ),
+
+            ),
+            SizedBox(
+              height: 50,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  width: 170,
+                  height: 60,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      _showPopupMessage(context);
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.red,
+                    ),
+                    child: Text('Stop', style: TextStyle(fontSize: 27),),
+                  ),
+                ),
+                SizedBox(width: 20),
+                SizedBox(
+                  width: 170,
+                  height: 60,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => Test3(Second: Second)),
+                      );
+                    },
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                    ),
+                    child: Text('Next', style: TextStyle(fontSize: 27),),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
     );
   }
+
 }

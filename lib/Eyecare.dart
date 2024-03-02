@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:audioplayers/audioplayers.dart';
-import 'package:shoes/eye20.dart';
+import 'package:IrisInsight/eye20.dart';
 
 import 'Nutrients.dart';
+import 'eye20.dart';
 import 'main.dart';
 import 'webview.dart';
 

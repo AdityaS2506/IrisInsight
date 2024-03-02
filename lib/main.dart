@@ -342,7 +342,7 @@ class MyHomePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Text("Collabrations",style: TextStyle(fontSize: 22,fontWeight: FontWeight.bold,color: Colors.white70),),
-                                Text("       "),Text("-----aWEFcjnawjsdbc kiuawshecbikas",style: TextStyle(fontSize: 15,color: Colors.white70),),
+                                Text("",style: TextStyle(fontSize: 15,color: Colors.white70),),
                               ],
                             ),
                           )

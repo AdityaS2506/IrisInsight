@@ -108,7 +108,7 @@ class _Text1State extends State<blind1> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('74',style: TextStyle(fontSize: 35),),
+                      child: const Text('29',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -132,7 +132,7 @@ class _Text1State extends State<blind1> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('71',style: TextStyle(fontSize: 35),),
+                      child: const Text('28',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                 ],
@@ -187,7 +187,6 @@ class _blind2State extends State<blind2> {
 
                       onPressed: () {
                         setState(() {
-                          score++;
                           // Navigate to next page
                           Navigator.pushReplacement(
                             context,
@@ -201,7 +200,7 @@ class _blind2State extends State<blind2> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('45',style: TextStyle(fontSize: 35),),
+                      child: const Text('6',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -225,7 +224,7 @@ class _blind2State extends State<blind2> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('15',style: TextStyle(fontSize: 35),),
+                      child: const Text('8',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -249,7 +248,7 @@ class _blind2State extends State<blind2> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('46',style: TextStyle(fontSize: 35),),
+                      child: const Text('9',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -273,7 +272,7 @@ class _blind2State extends State<blind2> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('40',style: TextStyle(fontSize: 35),),
+                      child: const Text('5',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                 ],
@@ -339,7 +338,7 @@ class _blind3State extends State<blind3> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('11',style: TextStyle(fontSize: 35),),
+                      child: const Text('40',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -364,7 +363,7 @@ class _blind3State extends State<blind3> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('12',style: TextStyle(fontSize: 35),),
+                      child: const Text('45',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -388,7 +387,7 @@ class _blind3State extends State<blind3> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('16',style: TextStyle(fontSize: 35),),
+                      child: const Text('62',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -411,7 +410,7 @@ class _blind3State extends State<blind3> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('14',style: TextStyle(fontSize: 35),),
+                      child: const Text('55',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                 ],
@@ -446,7 +445,7 @@ class _blind4State extends State<blind4> {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/b7.jpg'),
+                  image: AssetImage('assets/images/b4.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -479,7 +478,7 @@ class _blind4State extends State<blind4> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('9',style: TextStyle(fontSize: 35),),
+                      child: const Text('18',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -490,7 +489,6 @@ class _blind4State extends State<blind4> {
 
                       onPressed: () {
                         setState(() {
-                          score++;
                           // Navigate to next page
                           Navigator.pushReplacement(
                             context,
@@ -504,7 +502,7 @@ class _blind4State extends State<blind4> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                      child: const Text('11',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -528,7 +526,7 @@ class _blind4State extends State<blind4> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('96',style: TextStyle(fontSize: 35),),
+                      child: const Text('10',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -587,7 +585,7 @@ class _blind5State extends State<blind5> {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/b7.jpg'),
+                  image: AssetImage('assets/images/b5.jpg'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -728,7 +726,7 @@ class _blind6State extends State<blind6> {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/b7.jpg'),
+                  image: AssetImage('assets/images/b6.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -761,7 +759,7 @@ class _blind6State extends State<blind6> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('9',style: TextStyle(fontSize: 35),),
+                      child: const Text('77',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -772,7 +770,7 @@ class _blind6State extends State<blind6> {
 
                       onPressed: () {
                         setState(() {
-                          score++;
+
                           // Navigate to next page
                           Navigator.pushReplacement(
                             context,
@@ -786,7 +784,7 @@ class _blind6State extends State<blind6> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('6',style: TextStyle(fontSize: 35),),
+                      child: const Text('24',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                   const SizedBox(width: 10,),
@@ -821,7 +819,6 @@ class _blind6State extends State<blind6> {
 
                       onPressed: () {
                         setState(() {
-
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => blind7()),
@@ -834,7 +831,7 @@ class _blind6State extends State<blind6> {
                         onPrimary: Colors.black, // Text color
                         side: const BorderSide(color: Colors.blue), // Border color
                       ),
-                      child: const Text('23',style: TextStyle(fontSize: 35),),
+                      child: const Text('74',style: TextStyle(fontSize: 35),),
                     ),
                   ),
                 ],
@@ -870,7 +867,7 @@ class _blind7State extends State<blind7> {
               height: 400,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/b5.png'),
+                  image: AssetImage('assets/images/b7.png'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -937,7 +934,6 @@ class _blind7State extends State<blind7> {
 
                       onPressed: () {
                         setState(() {
-                          score++;
                           Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(builder: (context) => ScorePage(score: score)),
@@ -993,6 +989,7 @@ class ScorePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    String resultText = score == 3 ? "you have normal eyes" : "you have a red green colour \n               brightness";
 
     return Scaffold(
       appBar: AppBar(
@@ -1014,31 +1011,30 @@ class ScorePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Your Score:',
-              style: TextStyle(fontSize: 24, color: Colors.white),
+              'Result',
+              style: TextStyle(fontSize: 27, color: Colors.white, decoration: TextDecoration.underline,),
             ),
             Text(
-              '$score',
-              style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),
+              resultText,
+              style: TextStyle(fontSize: 24, color: Colors.white),
             ),
             SizedBox(height: 70,),
             SizedBox(
               width: 250,
               height: 40,
               child: ElevatedButton(
-
                 onPressed: () {
                   Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => check_num()));
+                    context,
+                    MaterialPageRoute(builder: (context) => check_num()),
+                  );
                 },
                 style: ElevatedButton.styleFrom(
-
                   primary: Colors.white, // Background color
                   onPrimary: Colors.black, // Text color
                   side: const BorderSide(color: Colors.blue), // Border color
                 ),
-                child: const Text('Done',style: TextStyle(fontSize: 35),),
+                child: const Text('Done', style: TextStyle(fontSize: 35),),
               ),
             ),
           ],
@@ -1047,3 +1043,4 @@ class ScorePage extends StatelessWidget {
     );
   }
 }
+

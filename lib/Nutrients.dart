@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:shoes/eye20.dart';
+import 'package:IrisInsight/eye20.dart';
 import 'main.dart';
 
 class Nutrients extends StatefulWidget {
